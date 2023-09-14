@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-12T23:11:06 IST" name="Default suite" finished-at="2023-09-12T23:11:17 IST" duration-ms="10868">
+  <suite started-at="2023-09-14T00:54:08 IST" name="Default suite" finished-at="2023-09-14T00:54:32 IST" duration-ms="23781">
     <groups>
     </groups>
-    <test started-at="2023-09-12T23:11:06 IST" name="Default test" finished-at="2023-09-12T23:11:17 IST" duration-ms="10868">
-      <class name="com.testQaTestCases.Login">
-        <test-method signature="verifyWithLoginInvalidCredentials()[pri:0, instance:com.testQaTestCases.Login@6c1a5b54]" started-at="2023-09-12T23:11:06 IST" name="verifyWithLoginInvalidCredentials" finished-at="2023-09-12T23:11:12 IST" duration-ms="5896" status="PASS">
+    <test started-at="2023-09-14T00:54:08 IST" name="Default test" finished-at="2023-09-14T00:54:32 IST" duration-ms="23781">
+      <class name="com.testQaTestCases.Register">
+        <test-method signature="verify_Register_With_Mandatory_Fields()[pri:1, instance:com.testQaTestCases.Register@60099951]" started-at="2023-09-14T00:54:08 IST" name="verify_Register_With_Mandatory_Fields" finished-at="2023-09-14T00:54:15 IST" duration-ms="7316" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyWithLoginInvalidCredentials -->
-        <test-method signature="verifyWithLoginValidCredentials()[pri:0, instance:com.testQaTestCases.Login@6c1a5b54]" started-at="2023-09-12T23:11:12 IST" name="verifyWithLoginValidCredentials" finished-at="2023-09-12T23:11:17 IST" duration-ms="4901" status="PASS">
+        </test-method> <!-- verify_Register_With_Mandatory_Fields -->
+        <test-method signature="verify_Register_With_all_fields()[pri:2, instance:com.testQaTestCases.Register@60099951]" started-at="2023-09-14T00:54:15 IST" name="verify_Register_With_all_fields" finished-at="2023-09-14T00:54:20 IST" duration-ms="5212" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyWithLoginValidCredentials -->
-      </class> <!-- com.testQaTestCases.Login -->
+        </test-method> <!-- verify_Register_With_all_fields -->
+        <test-method signature="Verify_Register_with_existing_mailId()[pri:3, instance:com.testQaTestCases.Register@60099951]" started-at="2023-09-14T00:54:20 IST" name="Verify_Register_with_existing_mailId" finished-at="2023-09-14T00:54:26 IST" duration-ms="5994" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify_Register_with_existing_mailId -->
+        <test-method signature="Verify_Registring_Account_without_Filling_anyDetails()[pri:4, instance:com.testQaTestCases.Register@60099951]" started-at="2023-09-14T00:54:26 IST" name="Verify_Registring_Account_without_Filling_anyDetails" finished-at="2023-09-14T00:54:32 IST" duration-ms="5202" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify_Registring_Account_without_Filling_anyDetails -->
+      </class> <!-- com.testQaTestCases.Register -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
