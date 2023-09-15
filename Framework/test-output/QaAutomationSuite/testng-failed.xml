@@ -3,17 +3,6 @@
 <suite name="Failed suite [QaAutomationSuite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="QaTestCases(failed)">
     <classes>
-      <class name="com.testQaTestCases.Login">
-        <methods>
-          <include name="verifyLoginWithInValidEmailIvalidPassword"/>
-          <include name="verifyWithLoginValidCredentials"/>
-          <include name="verifyLoginWithInValidPassword"/>
-          <include name="setUp"/>
-          <include name="verifyLoginWithInvalidEamil"/>
-          <include name="verifyLoginWihouCredentails"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.testQaTestCases.Login -->
       <class name="com.testQaTestCases.Search">
         <methods>
           <include name="tearDown"/>
@@ -23,6 +12,16 @@
           <include name="verfiyWithInvalidText"/>
         </methods>
       </class> <!-- com.testQaTestCases.Search -->
+      <class name="com.testQaTestCases.Login">
+        <methods>
+          <include name="verifyLoginWithInValidEmailIvalidPassword"/>
+          <include name="verifyLoginWithInValidPassword"/>
+          <include name="setUp"/>
+          <include name="verifyLoginWithInvalidEamil"/>
+          <include name="verifyLoginWihoutCredentails"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.testQaTestCases.Login -->
       <class name="com.testQaTestCases.Register">
         <methods>
           <include name="Verify_Register_with_existing_mailId"/>

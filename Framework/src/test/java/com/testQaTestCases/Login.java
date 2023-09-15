@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import com.QaBase.Base;
 import com.QaUtils.Utilities;
 
-public class Login extends Base {
+public class Login extends Base { 
 	public Login() {
 		super();
 	}
@@ -20,7 +20,7 @@ public class Login extends Base {
 	}
 
 	@AfterMethod
-	public void tearDown() {
+	public void tearDown() { 
 		driver.quit();
 	}
 
@@ -35,11 +35,10 @@ public class Login extends Base {
 	@Test(priority = 2)
 	public void verifyLoginWithInValidEmailIvalidPassword() {
 		driver.findElement(By.id("input-email")).sendKeys(Utilities.generate_Emai_With_TimeStamp());
-		driver.findElement(By.id("input-password")).sendKeys("12345");
+		driver.findElement(By.id("input-password")).sendKeys(prob.getProperty("Invalid_Password"));
 		driver.findElement(By.xpath("//input[@value='Login']")).click();
 		String actualWarningMsg = driver.findElement(By.xpath("//div[contains(@class,'alert-dismissible')]")).getText();
-		String ExpectedWarinigMsg = "Warning: No match for E-Mail Address and/or Password.";
-		Assert.assertTrue(actualWarningMsg.contains(ExpectedWarinigMsg), "Expected warning message is not displayed");
+		Assert.assertTrue(actualWarningMsg.contains(prob.getProperty("Expcted_Warning_Message_for_Invalid_Password")), "Expected warning message is not displayed");
 	}
 
 	@Test(priority = 3)
@@ -48,25 +47,22 @@ public class Login extends Base {
 		driver.findElement(By.id("input-password")).sendKeys(p.getProperty("ValidPassword"));
 		driver.findElement(By.xpath("//input[@value='Login']")).click();
 		String actualWarningMsg = driver.findElement(By.xpath("//div[contains(@class,'alert-dismissible')]")).getText();
-		String ExpectedWarinigMsg = "Warning: No match for E-Mail Address and/or Password.";
-		Assert.assertTrue(actualWarningMsg.contains(ExpectedWarinigMsg), "Expected warning message is not displayed");
+		Assert.assertTrue(actualWarningMsg.contains(prob.getProperty("Expcted_Warning_Message_for_Invalid_Password")), "Expected warning message is not displayed");
 	}
 
 	@Test(priority = 4)
 	public void verifyLoginWithInValidPassword() {
 		driver.findElement(By.id("input-email")).sendKeys(p.getProperty("ValidEmail"));
-		driver.findElement(By.id("input-password")).sendKeys("12345");
+		driver.findElement(By.id("input-password")).sendKeys(prob.getProperty("Iinvalid_Password"));
 		driver.findElement(By.xpath("//input[@value='Login']")).click();
 		String actualWarningMsg = driver.findElement(By.xpath("//div[contains(@class,'alert-dismissible')]")).getText();
-		String ExpectedWarinigMsg = "Warning: No match for E-Mail Address and/or Password.";
-		Assert.assertTrue(actualWarningMsg.contains(ExpectedWarinigMsg), "Expected warning message is not displayed");
+		Assert.assertTrue(actualWarningMsg.contains(prob.getProperty("Expcted_Warning_Message_for_Invalid_Password")), "Expected warning message is not displayed");
 	}
 
 	@Test(priority = 5)
-	public void verifyLoginWihouCredentails() {
+	public void verifyLoginWihoutCredentails() {
 		driver.findElement(By.xpath("//input[@value='Login']")).click();
 		String actualWarningMsg = driver.findElement(By.xpath("//div[contains(@class,'alert-dismissible')]")).getText();
-		String ExpectedWarinigMsg = "Warning: No match for E-Mail Address and/or Password.";
-		Assert.assertTrue(actualWarningMsg.contains(ExpectedWarinigMsg), "Expected warning message is not displayed");
+		Assert.assertTrue(actualWarningMsg.contains(prob.getProperty("Expcted_Warning_Message_for_Invalid_Password")), "Expected warning message is not displayed");
 	}
 }
