@@ -7,8 +7,10 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.QaBase.Base;
+import com.pages.HomePage;
 
 public class Search extends Base {
+	HomePage h;
 	public Search() {
 		super();
 	}
@@ -20,28 +22,26 @@ public class Search extends Base {
 
 	@Test(priority = 1)
 	public void verifySearchWithValidProduct() {
-		driver.findElement(By.name("search")).sendKeys(prob.getProperty("Product_Name"));
-		driver.findElement(By.xpath("//button[contains(@class,'btn btn-default btn-lg')]")).click();
-		Assert.assertTrue(driver.findElement(By.linkText("HP LP3065")).isDisplayed(),
-				"Valid product HP is not displayed in the search result");
+		h = new HomePage(driver);
+		h.search_product(prob.getProperty("Product_Name"));
+		h.click_On_Search_Btn();
+		Assert.assertTrue(h.is_product_available(),"Valid product HP is not displayed in the search result");
 	}
 
 	@Test(priority = 2)
 	public void verfiyWithInvalidText() {
-		driver.findElement(By.name("search")).sendKeys(prob.getProperty("Invalid_Product_Name"));
+		h = new HomePage(driver);
+		h.search_product(prob.getProperty("Invalid_Product_Name"));
 		driver.findElement(By.xpath("//button[contains(@class,'btn btn-default btn-lg')]")).click();
-		String actualSearchMsg = driver.findElement(By.xpath("//div[@id='content']/h2/following-sibling::p")).getText();
-		Assert.assertTrue(actualSearchMsg.equals(prob.getProperty("Warning_message_For_Invalid_Password")),
-				"Message is invalid");
+		Assert.assertTrue(h.warning_Msg_for_Invalid_product_search().equals(prob.getProperty("Warning_message_For_Invalid_Product")),"Message is invalid");
 	}
 
 	@Test(priority = 3)
 	public void verifyWithoutAnyProduct() {
-		driver.findElement(By.name("search")).sendKeys("");
-		driver.findElement(By.xpath("//button[contains(@class,'btn btn-default btn-lg')]")).click();
-		String actualSearchMsg = driver.findElement(By.xpath("//div[@id='content']/h2/following-sibling::p")).getText();
-		Assert.assertTrue(actualSearchMsg.equals(prob.getProperty("Warning_message_For_Invalid_Password")),
-				"Message is invalid");
+		h = new HomePage(driver);
+		h.search_product("");
+		h.click_On_Search_Btn();
+		Assert.assertTrue(h.warning_Msg_for_Invalid_product_search().equals(prob.getProperty("Warning_message_For_Invalid_Product")),"Message is invalid");
 	}
 
 	@AfterMethod

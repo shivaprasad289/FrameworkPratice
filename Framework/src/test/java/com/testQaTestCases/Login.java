@@ -1,68 +1,97 @@
 package com.testQaTestCases;
 
-import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
 import com.QaBase.Base;
 import com.QaUtils.Utilities;
+import com.pages.AccountsPage;
+import com.pages.HomePage;
+import com.pages.LoginPage;
 
-public class Login extends Base { 
+public class Login extends Base {
+	WebDriver driver;
+	LoginPage l;
 	public Login() {
 		super();
 	}
+
 	@BeforeMethod
 	public void setUp() {
-		driver = initializeBrowserAndOpenApplication(p.getProperty("browser")); 
-		driver.findElement(By.xpath("//span[text()='My Account']")).click();
-		driver.findElement(By.linkText("Login")).click();
+		driver = initializeBrowserAndOpenApplication(p.getProperty("browser"));
+		HomePage h = new HomePage(driver);
+		h.click_On_MyAccount_Link();
+		h.click_On_Login_Link();
 	}
 
 	@AfterMethod
-	public void tearDown() { 
+	public void tearDown() {
 		driver.quit();
 	}
 
-	@Test(priority = 1)
-	public void verifyWithLoginValidCredentials() throws InterruptedException {
-		driver.findElement(By.id("input-email")).sendKeys(p.getProperty("ValidEmail"));
-		driver.findElement(By.id("input-password")).sendKeys(p.getProperty("ValidPassword"));
-		driver.findElement(By.xpath("//input[@value='Login']")).click();
-		Assert.assertTrue(driver.findElement(By.linkText("Account")).isDisplayed(), "Account page is not displayed");
+	@Test(priority = 1, dataProvider = "ValidCredentails")
+	public void verifyWithLoginValidCredentials(String email, String password) throws InterruptedException {
+	    l = new LoginPage(driver);
+		l.enter_EmailId(email);
+		l.enter_password(password);
+		l.click_On_Login_Btn();
+		AccountsPage a = new AccountsPage(driver);
+		Assert.assertTrue(a.verify_Account_Page_isDisplayed(), "Account page is not displayed");
+	}
+
+	@DataProvider(name = "ValidCredentails")
+	public Object[][] supplyData() {
+		return Utilities.read_All_Data_From_Excel("Login");
 	}
 
 	@Test(priority = 2)
 	public void verifyLoginWithInValidEmailIvalidPassword() {
-		driver.findElement(By.id("input-email")).sendKeys(Utilities.generate_Emai_With_TimeStamp());
-		driver.findElement(By.id("input-password")).sendKeys(prob.getProperty("Invalid_Password"));
-		driver.findElement(By.xpath("//input[@value='Login']")).click();
-		String actualWarningMsg = driver.findElement(By.xpath("//div[contains(@class,'alert-dismissible')]")).getText();
-		Assert.assertTrue(actualWarningMsg.contains(prob.getProperty("Expcted_Warning_Message_for_Invalid_Password")), "Expected warning message is not displayed");
+		l = new LoginPage(driver);
+		l.enter_EmailId(Utilities.generate_Emai_With_TimeStamp());
+		l.enter_password(prob.getProperty("Invalid_Password"));
+		l.click_On_Login_Btn();
+		Assert.assertTrue(
+				l.invalid_Credentials_Warning_msg()
+						.contains(prob.getProperty("Expcted_Warning_Message_for_Invalid_Password")),
+				"Expected warning message is not displayed");
 	}
 
 	@Test(priority = 3)
 	public void verifyLoginWithInvalidEamil() throws InterruptedException {
-		driver.findElement(By.id("input-email")).sendKeys(Utilities.generate_Emai_With_TimeStamp());
-		driver.findElement(By.id("input-password")).sendKeys(p.getProperty("ValidPassword"));
-		driver.findElement(By.xpath("//input[@value='Login']")).click();
-		String actualWarningMsg = driver.findElement(By.xpath("//div[contains(@class,'alert-dismissible')]")).getText();
-		Assert.assertTrue(actualWarningMsg.contains(prob.getProperty("Expcted_Warning_Message_for_Invalid_Password")), "Expected warning message is not displayed");
+		l = new LoginPage(driver);
+		l.enter_EmailId(Utilities.generate_Emai_With_TimeStamp());
+		l.enter_password(prob.getProperty("Valid_Password"));
+		l.click_On_Login_Btn();
+		Assert.assertTrue(
+				l.invalid_Credentials_Warning_msg()
+						.contains(prob.getProperty("Expcted_Warning_Message_for_Invalid_Password")),
+				"Expected warning message is not displayed");
 	}
 
 	@Test(priority = 4)
 	public void verifyLoginWithInValidPassword() {
-		driver.findElement(By.id("input-email")).sendKeys(p.getProperty("ValidEmail"));
-		driver.findElement(By.id("input-password")).sendKeys(prob.getProperty("Iinvalid_Password"));
-		driver.findElement(By.xpath("//input[@value='Login']")).click();
-		String actualWarningMsg = driver.findElement(By.xpath("//div[contains(@class,'alert-dismissible')]")).getText();
-		Assert.assertTrue(actualWarningMsg.contains(prob.getProperty("Expcted_Warning_Message_for_Invalid_Password")), "Expected warning message is not displayed");
+		l = new LoginPage(driver);
+		l.enter_EmailId(p.getProperty("ValidEmail"));
+		l.enter_password(prob.getProperty("Iinvalid_Password"));
+		l.click_On_Login_Btn();
+		Assert.assertTrue(
+				l.invalid_Credentials_Warning_msg()
+						.contains(prob.getProperty("Expcted_Warning_Message_for_Invalid_Password")),
+				"Expected warning message is not displayed");
 	}
 
 	@Test(priority = 5)
 	public void verifyLoginWihoutCredentails() {
-		driver.findElement(By.xpath("//input[@value='Login']")).click();
-		String actualWarningMsg = driver.findElement(By.xpath("//div[contains(@class,'alert-dismissible')]")).getText();
-		Assert.assertTrue(actualWarningMsg.contains(prob.getProperty("Expcted_Warning_Message_for_Invalid_Password")), "Expected warning message is not displayed");
+		l = new LoginPage(driver);
+		l.click_On_Login_Btn();
+		Assert.assertTrue(
+				l.invalid_Credentials_Warning_msg()
+						.contains(prob.getProperty("Expcted_Warning_Message_for_Invalid_Password")),
+				"Expected warning message is not displayed");
+
 	}
 }
