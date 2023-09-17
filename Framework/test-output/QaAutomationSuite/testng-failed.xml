@@ -8,29 +8,8 @@
           <include name="tearDown"/>
           <include name="verifySearchWithValidProduct"/>
           <include name="setUp"/>
-          <include name="verifyWithoutAnyProduct"/>
-          <include name="verfiyWithInvalidText"/>
         </methods>
       </class> <!-- com.testQaTestCases.Search -->
-      <class name="com.testQaTestCases.Login">
-        <methods>
-          <include name="verifyLoginWithInValidEmailIvalidPassword"/>
-          <include name="verifyLoginWithInValidPassword"/>
-          <include name="setUp"/>
-          <include name="verifyLoginWithInvalidEamil"/>
-          <include name="verifyLoginWihoutCredentails"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.testQaTestCases.Login -->
-      <class name="com.testQaTestCases.Register">
-        <methods>
-          <include name="Verify_Register_with_existing_mailId"/>
-          <include name="verify_Register_With_all_fields"/>
-          <include name="setUp"/>
-          <include name="verify_Register_With_Mandatory_Fields"/>
-          <include name="Verify_Registring_Account_without_Filling_anyDetails"/>
-        </methods>
-      </class> <!-- com.testQaTestCases.Register -->
     </classes>
   </test> <!-- QaTestCases(failed) -->
 </suite> <!-- Failed suite [QaAutomationSuite] -->

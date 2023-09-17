@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testQaTestCases.Search">
+      <class name="com.testQaTestCases.Register">
         <methods>
-          <include name="tearDown"/>
+          <include name="verify_Register_With_all_fields"/>
           <include name="setUp"/>
-          <include name="verifyWithoutAnyProduct"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.testQaTestCases.Search -->
+      </class> <!-- com.testQaTestCases.Register -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

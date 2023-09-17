@@ -18,46 +18,30 @@ public class HomePage {
 
 	@FindBy(name = "search")
 	private WebElement searchTxtbox;
-	
+
 	@FindBy(xpath = "//button[contains(@class,'btn btn-default btn-lg')]")
 	private WebElement searchBtn;
-	
-	@FindBy(linkText = "HP LP3065")
-	private WebElement product;
-	
-	@FindBy(xpath = "//div[@id='content']/h2/following-sibling::p")
-	private WebElement searchProductWarningMsg;
 
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 
-	public void click_On_MyAccount_Link() {
+	public LoginPage navigate_to_loginPage() {
 		myAccountLink.click();
-	}
-
-	public void click_On_Login_Link() {
 		loginLink.click();
+		return new LoginPage(driver);
 	}
 
-	public void click_on_Register_link() {
+	public RegisterPage navigate_to_registerPage() {
+		myAccountLink.click();
 		registerLink.click();
+		return new RegisterPage(driver);
 	}
 
-	public void search_product(String name) {
+	public SearchPage search_product(String name) {
 		searchTxtbox.sendKeys(name);
-	}
-	
-	public void click_On_Search_Btn() {
 		searchBtn.click();
-	}
-	
-	public boolean is_product_available() {
-		return product.isDisplayed();
-	}
-	
-	public String warning_Msg_for_Invalid_product_search() {
-		return searchProductWarningMsg.getText();
+		return new SearchPage(driver);
 	}
 }
