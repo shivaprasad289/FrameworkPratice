@@ -23,19 +23,20 @@ public class LoginPage {
 		this.driver = driver;
 		PageFactory.initElements(driver,this);
 	}
-	public void enter_EmailId(String email) {
-		emailIdTxtField.sendKeys(email);
-	}
 	
-	public void enter_password(String password) {
-		pwdTxtField.sendKeys(password);
-	}
-	
-	public void click_On_Login_Btn() {
+	public AccountsPage click_On_Login_Btn() {
 		loginBtn.click();
+		return new AccountsPage(driver);
 	}
 		
 	public String invalid_Credentials_Warning_msg() {
 		return inValidCredentailsWarningMsg.getText();
+	}
+	
+	public AccountsPage login(String email,String pwd) {
+		emailIdTxtField.sendKeys(email);
+		pwdTxtField.sendKeys(pwd);
+		loginBtn.click();
+		return new AccountsPage(driver);
 	}
 }

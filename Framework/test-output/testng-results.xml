@@ -1,173 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
+<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-17T19:26:21 IST" name="QaAutomationSuite" finished-at="2023-09-17T19:27:22 IST" duration-ms="61663">
+  <suite started-at="2023-09-17T23:46:33 IST" name="Default suite" finished-at="2023-09-17T23:46:37 IST" duration-ms="4370">
     <groups>
     </groups>
-    <test started-at="2023-09-17T19:26:21 IST" name="QaTestCases" finished-at="2023-09-17T19:27:22 IST" duration-ms="61663">
+    <test started-at="2023-09-17T23:46:33 IST" name="Default test" finished-at="2023-09-17T23:46:37 IST" duration-ms="4370">
       <class name="com.testQaTestCases.Search">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testQaTestCases.Search@3e08ff24]" started-at="2023-09-17T19:27:10 IST" name="setUp" finished-at="2023-09-17T19:27:13 IST" duration-ms="2987" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testQaTestCases.Search@2eae8e6e]" started-at="2023-09-17T23:46:33 IST" name="setUp" finished-at="2023-09-17T23:46:36 IST" duration-ms="3230" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifySearchWithValidProduct()[pri:1, instance:com.testQaTestCases.Search@3e08ff24]" started-at="2023-09-17T19:27:13 IST" name="verifySearchWithValidProduct" finished-at="2023-09-17T19:27:13 IST" duration-ms="355" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifySearchWithValidProduct -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testQaTestCases.Search@3e08ff24]" started-at="2023-09-17T19:27:13 IST" name="tearDown" finished-at="2023-09-17T19:27:14 IST" duration-ms="697" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testQaTestCases.Search@3e08ff24]" started-at="2023-09-17T19:27:14 IST" name="setUp" finished-at="2023-09-17T19:27:17 IST" duration-ms="3375" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verfiyWithInvalidText()[pri:2, instance:com.testQaTestCases.Search@3e08ff24]" started-at="2023-09-17T19:27:17 IST" name="verfiyWithInvalidText" finished-at="2023-09-17T19:27:17 IST" duration-ms="364" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verfiyWithInvalidText -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testQaTestCases.Search@3e08ff24]" started-at="2023-09-17T19:27:17 IST" name="tearDown" finished-at="2023-09-17T19:27:18 IST" duration-ms="723" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testQaTestCases.Search@3e08ff24]" started-at="2023-09-17T19:27:18 IST" name="setUp" finished-at="2023-09-17T19:27:21 IST" duration-ms="3060" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyWithoutAnyProduct()[pri:3, instance:com.testQaTestCases.Search@3e08ff24]" started-at="2023-09-17T19:27:21 IST" name="verifyWithoutAnyProduct" finished-at="2023-09-17T19:27:22 IST" duration-ms="401" status="PASS">
+        <test-method signature="verifyWithoutAnyProduct()[pri:3, instance:com.testQaTestCases.Search@2eae8e6e]" started-at="2023-09-17T23:46:36 IST" name="verifyWithoutAnyProduct" finished-at="2023-09-17T23:46:37 IST" duration-ms="421" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyWithoutAnyProduct -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testQaTestCases.Search@3e08ff24]" started-at="2023-09-17T19:27:22 IST" name="tearDown" finished-at="2023-09-17T19:27:22 IST" duration-ms="748" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testQaTestCases.Search@2eae8e6e]" started-at="2023-09-17T23:46:37 IST" name="tearDown" finished-at="2023-09-17T23:46:37 IST" duration-ms="669" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.testQaTestCases.Search -->
-      <class name="com.testQaTestCases.Register">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testQaTestCases.Register@75d3a5e0]" started-at="2023-09-17T19:26:21 IST" name="setUp" finished-at="2023-09-17T19:26:25 IST" duration-ms="3754" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verify_Register_With_Mandatory_Fields()[pri:1, instance:com.testQaTestCases.Register@75d3a5e0]" started-at="2023-09-17T19:26:25 IST" name="verify_Register_With_Mandatory_Fields" finished-at="2023-09-17T19:26:26 IST" duration-ms="1342" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_Register_With_Mandatory_Fields -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testQaTestCases.Register@75d3a5e0]" started-at="2023-09-17T19:26:26 IST" name="tearDown" finished-at="2023-09-17T19:26:27 IST" duration-ms="775" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testQaTestCases.Register@75d3a5e0]" started-at="2023-09-17T19:26:27 IST" name="setUp" finished-at="2023-09-17T19:26:31 IST" duration-ms="4276" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verify_Register_With_all_fields()[pri:2, instance:com.testQaTestCases.Register@75d3a5e0]" started-at="2023-09-17T19:26:31 IST" name="verify_Register_With_all_fields" finished-at="2023-09-17T19:26:32 IST" duration-ms="1184" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_Register_With_all_fields -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testQaTestCases.Register@75d3a5e0]" started-at="2023-09-17T19:26:32 IST" name="tearDown" finished-at="2023-09-17T19:26:33 IST" duration-ms="764" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testQaTestCases.Register@75d3a5e0]" started-at="2023-09-17T19:26:33 IST" name="setUp" finished-at="2023-09-17T19:26:37 IST" duration-ms="3819" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="Verify_Register_with_existing_mailId()[pri:3, instance:com.testQaTestCases.Register@75d3a5e0]" started-at="2023-09-17T19:26:37 IST" name="Verify_Register_with_existing_mailId" finished-at="2023-09-17T19:26:38 IST" duration-ms="1347" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Verify_Register_with_existing_mailId -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testQaTestCases.Register@75d3a5e0]" started-at="2023-09-17T19:26:38 IST" name="tearDown" finished-at="2023-09-17T19:26:39 IST" duration-ms="773" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testQaTestCases.Register@75d3a5e0]" started-at="2023-09-17T19:26:39 IST" name="setUp" finished-at="2023-09-17T19:26:42 IST" duration-ms="3514" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="Verify_Registring_Account_without_Filling_anyDetails()[pri:4, instance:com.testQaTestCases.Register@75d3a5e0]" started-at="2023-09-17T19:26:42 IST" name="Verify_Registring_Account_without_Filling_anyDetails" finished-at="2023-09-17T19:26:43 IST" duration-ms="872" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Verify_Registring_Account_without_Filling_anyDetails -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testQaTestCases.Register@75d3a5e0]" started-at="2023-09-17T19:26:43 IST" name="tearDown" finished-at="2023-09-17T19:26:44 IST" duration-ms="726" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.testQaTestCases.Register -->
-      <class name="com.testQaTestCases.Login">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testQaTestCases.Login@2b40ff9c]" started-at="2023-09-17T19:26:45 IST" name="setUp" finished-at="2023-09-17T19:26:48 IST" duration-ms="3202" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyWithLoginValidCredentials(java.lang.String,java.lang.String)[pri:1, instance:com.testQaTestCases.Login@2b40ff9c]" started-at="2023-09-17T19:26:48 IST" name="verifyWithLoginValidCredentials" data-provider="ValidCredentails" finished-at="2023-09-17T19:26:49 IST" duration-ms="971" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[shivaprasadsh1998@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[123456]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyWithLoginValidCredentials -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testQaTestCases.Login@2b40ff9c]" started-at="2023-09-17T19:26:49 IST" name="tearDown" finished-at="2023-09-17T19:26:50 IST" duration-ms="725" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testQaTestCases.Login@2b40ff9c]" started-at="2023-09-17T19:26:50 IST" name="setUp" finished-at="2023-09-17T19:26:53 IST" duration-ms="3505" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyLoginWithInValidEmailIvalidPassword()[pri:2, instance:com.testQaTestCases.Login@2b40ff9c]" started-at="2023-09-17T19:26:53 IST" name="verifyLoginWithInValidEmailIvalidPassword" finished-at="2023-09-17T19:26:54 IST" duration-ms="915" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLoginWithInValidEmailIvalidPassword -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testQaTestCases.Login@2b40ff9c]" started-at="2023-09-17T19:26:54 IST" name="tearDown" finished-at="2023-09-17T19:26:55 IST" duration-ms="684" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testQaTestCases.Login@2b40ff9c]" started-at="2023-09-17T19:26:55 IST" name="setUp" finished-at="2023-09-17T19:26:58 IST" duration-ms="3456" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyLoginWithInvalidEamil()[pri:3, instance:com.testQaTestCases.Login@2b40ff9c]" started-at="2023-09-17T19:26:58 IST" name="verifyLoginWithInvalidEamil" finished-at="2023-09-17T19:26:59 IST" duration-ms="902" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLoginWithInvalidEamil -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testQaTestCases.Login@2b40ff9c]" started-at="2023-09-17T19:26:59 IST" name="tearDown" finished-at="2023-09-17T19:27:00 IST" duration-ms="715" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testQaTestCases.Login@2b40ff9c]" started-at="2023-09-17T19:27:00 IST" name="setUp" finished-at="2023-09-17T19:27:03 IST" duration-ms="3409" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyLoginWithInValidPassword()[pri:4, instance:com.testQaTestCases.Login@2b40ff9c]" started-at="2023-09-17T19:27:03 IST" name="verifyLoginWithInValidPassword" finished-at="2023-09-17T19:27:04 IST" duration-ms="787" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLoginWithInValidPassword -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testQaTestCases.Login@2b40ff9c]" started-at="2023-09-17T19:27:04 IST" name="tearDown" finished-at="2023-09-17T19:27:05 IST" duration-ms="695" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testQaTestCases.Login@2b40ff9c]" started-at="2023-09-17T19:27:05 IST" name="setUp" finished-at="2023-09-17T19:27:08 IST" duration-ms="3446" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyLoginWihoutCredentails()[pri:5, instance:com.testQaTestCases.Login@2b40ff9c]" started-at="2023-09-17T19:27:08 IST" name="verifyLoginWihoutCredentails" finished-at="2023-09-17T19:27:09 IST" duration-ms="916" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLoginWihoutCredentails -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testQaTestCases.Login@2b40ff9c]" started-at="2023-09-17T19:27:09 IST" name="tearDown" finished-at="2023-09-17T19:27:10 IST" duration-ms="742" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.testQaTestCases.Login -->
-    </test> <!-- QaTestCases -->
-  </suite> <!-- QaAutomationSuite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
