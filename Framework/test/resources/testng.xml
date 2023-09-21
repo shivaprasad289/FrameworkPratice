@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="QaAutomationSuite">
-  <test name="QaTestCases">
-    <classes>
-      <class name="com.testQaTestCases.Register"/>
-      <class name="com.testQaTestCases.Login"/>
-      <class name="com.testQaTestCases.Search"/>
-    </classes>
-  </test>
-</suite> 
+	<listeners>
+		<listener class-name="com.listerners.MyListeterners" />
+	</listeners>
+	<test name="QaTestCases">
+		<classes>
+			<class name="com.testQaTestCases.RegisterTest" />
+			<class name="com.testQaTestCases.LoginTest" />
+			<class name="com.testQaTestCases.SearchTest" />
+		</classes>
+	</test>
+</suite>
